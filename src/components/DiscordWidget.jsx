@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const WIDGET_URL = "https://discord.com/api/guilds/1390223144949780541/widget.json";
+const WIDGET_URL = "https://discord.com/api/guilds/1340640018460442654/widget.json";
 
 function DiscordWidget() {
   const [data, setData] = useState(null);
