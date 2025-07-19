@@ -4,8 +4,8 @@
   "description": "A modern website for the Atlas Community focused on roleplay servers for MTA and Garry's Mod.",
   "main": "src/App.jsx",
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "start": "start",
+    "build": "build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
