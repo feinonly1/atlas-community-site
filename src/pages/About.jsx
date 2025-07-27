@@ -3,14 +3,14 @@ import React, { useEffect, useState } from "react";
 const team = [
 	{
 		name: "Tuncay (feinonly)",
-		role: "Kurucu & Developer",
+		role: "Kurucu",
 		desc: "Topluluğun vizyonunu belirler, yenilikçi projeleri yönetir.",
 		avatar:
 			"https://cdn.discordapp.com/avatars/676793498640580608/479c48abe7347248b2d4dbe775b48005?size=1024",
 	},
   {
 		name: "Yamaç (asuwup)",
-		role: "Kurucu",
+		role: "Kurucu Ortak & Proje Yöneticisi",
 		desc: "Topluluğun vizyonunu belirler, yenilikçi projeleri yönetir.",
 		avatar:
 			"https://cdn.discordapp.com/avatars/458611579798421505/abf65e06958f87969ab1c226405146df?size=1024",
@@ -24,7 +24,7 @@ const team = [
 	},
   	{
 		name: "Halil (halilfirarda)",
-		role: "Developer & Proje Yöneticisi",
+		role: "Üst Yönetim Kurulu (ÜYK)",
 		desc: "Topluluğun vizyonunu belirler, yenilikçi projeleri yönetir.",
 		avatar:
 			"https://cdn.discordapp.com/avatars/1103659555793141800/51bd29842c3f30eb13e56ad3d281baa9?size=1024",

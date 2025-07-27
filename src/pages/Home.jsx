@@ -10,22 +10,6 @@ function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Mouse efektini butona uygula
-  const handleMouseMove = (e) => {
-    const btn = e.currentTarget;
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    btn.style.setProperty("--mouse-x", `${x}px`);
-    btn.style.setProperty("--mouse-y", `${y}px`);
-  };
-
-  const handleMouseLeave = (e) => {
-    const btn = e.currentTarget;
-    btn.style.removeProperty("--mouse-x");
-    btn.style.removeProperty("--mouse-y");
-  };
-
   return (
     <div className="home">
       <section className="hero">

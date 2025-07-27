@@ -5,7 +5,7 @@ const servers = [
     name: "Atlas MTA Roleplay",
     ip: "mtasa://123.45.67.89:22003",
     description: "Modern ve gelişmiş MTA Roleplay sunucusu.",
-    type: "MTA"
+    type: "Multi Theft Auto: San Andreas"
   },
   {
     name: "Atlas Garry's Mod RP",

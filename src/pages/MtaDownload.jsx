@@ -9,22 +9,6 @@ function MtaDownload() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Mouse efektini butonlara uygula
-  const handleMouseMove = (e) => {
-    const btn = e.currentTarget;
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    btn.style.setProperty("--mouse-x", `${x}px`);
-    btn.style.setProperty("--mouse-y", `${y}px`);
-  };
-
-  const handleMouseLeave = (e) => {
-    const btn = e.currentTarget;
-    btn.style.removeProperty("--mouse-x");
-    btn.style.removeProperty("--mouse-y");
-  };
-
   return (
     <div className="mta-download-page">
       <h2 className={`anim-fade-in-down${animate ? " anim-in" : ""}`}>
@@ -76,8 +60,6 @@ function MtaDownload() {
           href="https://mtasa.com/download/"
           target="_blank"
           rel="noopener noreferrer"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
         >
           MTA:SA Son Sürüm İndir
         </a>
@@ -86,8 +68,6 @@ function MtaDownload() {
           href="https://drive.google.com/drive/folders/1mMlbLvtuEKZn-aBZ7Qq8FdB3NIipelHg"
           target="_blank"
           rel="noopener noreferrer"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
         >
           GTA:SA İndir
         </a>
