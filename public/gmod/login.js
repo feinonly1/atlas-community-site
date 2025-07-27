@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initializeLoadingScreen();
     initializeParticles();
-    initializeLoadingBar();
     startBackgroundAnimation();
 });
 
@@ -86,35 +85,6 @@ function initializeParticles() {
     
     // Continue creating particles
     setInterval(createParticle, 800);
-}
-
-// ==================== LOADING BAR ANIMATION ==================== //
-function initializeLoadingBar() {
-    const loadingFill = document.querySelector('.loading-fill');
-    let progress = 0;
-    const targetProgress = 100;
-    const duration = 30000; // 30 seconds
-    const interval = 50; // Update every 50ms
-    const increment = (targetProgress / duration) * interval;
-    
-    function updateProgress() {
-        if (progress < targetProgress) {
-            progress += increment + (Math.random() * 0.5); // Add slight randomness
-            progress = Math.min(progress, targetProgress);
-            loadingFill.style.width = progress + '%';
-            
-            setTimeout(updateProgress, interval);
-        } else {
-            // Reset and restart
-            setTimeout(() => {
-                progress = 0;
-                loadingFill.style.width = '0%';
-                setTimeout(updateProgress, 500);
-            }, 2000);
-        }
-    }
-    
-    updateProgress();
 }
 
 // ==================== BACKGROUND ANIMATION ==================== //
