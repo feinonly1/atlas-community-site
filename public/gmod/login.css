@@ -1,0 +1,342 @@
+/* ==================== BASE STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(135deg, #050514 0%, #0a0a23 25%, #0f1935 50%, #0a0a23 75%, #050514 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+/* ==================== ANIMATED BACKGROUND ==================== */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    radial-gradient(circle 600px at 30% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+    radial-gradient(circle 800px at 70% 80%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+    radial-gradient(circle 400px at 80% 20%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  animation: backgroundFloat 20s ease-in-out infinite;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% { 
+    background: 
+      radial-gradient(circle 600px at 30% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+      radial-gradient(circle 800px at 70% 80%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+      radial-gradient(circle 400px at 80% 20%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  }
+  50% { 
+    background: 
+      radial-gradient(circle 600px at 60% 60%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+      radial-gradient(circle 800px at 40% 30%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+      radial-gradient(circle 400px at 20% 70%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  }
+}
+
+/* ==================== FLOATING PARTICLES ==================== */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0);
+    opacity: 0;
+  }
+}
+
+/* ==================== WELCOME SCREEN ==================== */
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== LOGO SECTION ==================== */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5vh;
+}
+
+.logo-container {
+  text-align: center;
+  animation: logoEntrance 2s ease-out;
+}
+
+.main-logo {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00e0ff 0%, #00b4d8 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 8px;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+  filter: drop-shadow(0 4px 20px rgba(0, 180, 216, 0.3));
+}
+
+.logo-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 3px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.logo-line {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00b4d8, transparent);
+  margin: 0 auto;
+  animation: lineGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ==================== WELCOME CONTENT ==================== */
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  animation: contentFadeIn 2.5s ease-out 0.5s both;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #00b4d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-text {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+/* ==================== LOADING SECTION ==================== */
+.loading-section {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.loading-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #00b4d8, #185adb, #00e0ff);
+  border-radius: 3px;
+  animation: loadingProgress 30s ease-in-out infinite;
+  position: relative;
+}
+
+.loading-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+  animation: loadingShine 2s ease-in-out infinite;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: loadingTextBlink 2s ease-in-out infinite;
+}
+
+@keyframes loadingProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes loadingShine {
+  0% { transform: translateX(-20px); }
+  100% { transform: translateX(20px); }
+}
+
+@keyframes loadingTextBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== FOOTER INFO ==================== */
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  animation: footerFadeIn 3.5s ease-out 1.5s both;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.footer-right {
+  color: #00b4d8;
+  font-weight: 500;
+}
+
+@keyframes footerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .welcome-screen {
+    padding: 2rem 1rem;
+  }
+  
+  .main-logo {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+  }
+  
+  .logo-subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-text {
+    font-size: 1.1rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .footer-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-logo {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+  
+  .welcome-title {
+    font-size: 1.6rem;
+  }
+  
+  .welcome-text {
+    font-size: 1rem;
+  }
+}

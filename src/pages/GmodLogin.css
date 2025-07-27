@@ -1,0 +1,198 @@
+/* ==================== GMOD REDIRECT PAGE ==================== */
+.gmod-redirect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #050514 0%, #0a0a23 25%, #0f1935 50%, #0a0a23 75%, #050514 100%);
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.gmod-redirect-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle 600px at 30% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+    radial-gradient(circle 800px at 70% 80%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+    radial-gradient(circle 400px at 80% 20%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  animation: backgroundFloat 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% { 
+    background: 
+      radial-gradient(circle 600px at 30% 40%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+      radial-gradient(circle 800px at 70% 80%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+      radial-gradient(circle 400px at 80% 20%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  }
+  50% { 
+    background: 
+      radial-gradient(circle 600px at 60% 60%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+      radial-gradient(circle 800px at 40% 30%, rgba(24, 90, 219, 0.1) 0%, transparent 50%),
+      radial-gradient(circle 400px at 20% 70%, rgba(30, 144, 255, 0.08) 0%, transparent 50%);
+  }
+}
+
+.gmod-redirect-content {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(26, 26, 46, 0.8);
+  border-radius: 2rem;
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 20px 60px rgba(10, 10, 35, 0.4),
+    0 8px 32px rgba(0, 180, 216, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: contentFadeIn 1s ease-out;
+  max-width: 500px;
+  position: relative;
+}
+
+.gmod-redirect-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00b4d8, #185adb, #00b4d8);
+  border-radius: 2rem 2rem 0 0;
+  animation: headerGlow 3s ease-in-out infinite;
+}
+
+.gmod-redirect-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #00e0ff 0%, #00b4d8 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+  filter: drop-shadow(0 4px 20px rgba(0, 180, 216, 0.3));
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+.gmod-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(0, 180, 216, 0.3);
+  border-top: 4px solid #00b4d8;
+  border-radius: 50%;
+  margin: 2rem auto;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+}
+
+.gmod-redirect-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  animation: textBlink 2s ease-in-out infinite;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.6);
+  }
+  100% { 
+    transform: rotate(360deg);
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+  }
+}
+
+@keyframes titleGlow {
+  0%, 100% { 
+    filter: drop-shadow(0 4px 20px rgba(0, 180, 216, 0.3));
+    text-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+  }
+  50% { 
+    filter: drop-shadow(0 6px 30px rgba(0, 180, 216, 0.5));
+    text-shadow: 0 0 40px rgba(0, 180, 216, 0.7);
+  }
+}
+
+@keyframes headerGlow {
+  0%, 100% { 
+    background: linear-gradient(90deg, #00b4d8, #185adb, #00b4d8);
+    opacity: 0.8;
+  }
+  50% { 
+    background: linear-gradient(90deg, #00e0ff, #1e90ff, #00e0ff);
+    opacity: 1;
+  }
+}
+
+@keyframes textBlink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .gmod-redirect-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    max-width: 90vw;
+  }
+  
+  .gmod-redirect-title {
+    font-size: 2rem;
+  }
+  
+  .gmod-redirect-text {
+    font-size: 1rem;
+  }
+  
+  .gmod-loading-spinner {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gmod-redirect-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .gmod-redirect-title {
+    font-size: 1.6rem;
+  }
+  
+  .gmod-redirect-text {
+    font-size: 0.9rem;
+  }
+  
+  .gmod-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+  }
+}

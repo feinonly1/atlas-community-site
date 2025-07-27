@@ -7,6 +7,7 @@ import WaveBackground from "./components/WaveBackground";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import MtaDownload from "./pages/MtaDownload";
+import GmodLogin from "./pages/GmodLogin";
 import "../src/styles/main.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/hakkımızda" component={About} />
             <Route path="/mta-indir" component={MtaDownload} />
+            <Route path="/gmod" component={GmodLogin} />
           </Switch>
         </main>
         <Footer />
