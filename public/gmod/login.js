@@ -15,7 +15,7 @@ function initializeLoadingScreen() {
         'Sunucuya bağlanılıyor...',
         'Oyuncu verisi doğrulanıyor...',
         'Harita yükleniyor...',
-        'Modlar senkronize ediliyor...',
+        'Atölyeler senkronize ediliyor...',
         'Varlıklar indiriliyor...',
         'Sunucu kuralları yükleniyor...',
         'Karakter verisi hazırlanıyor...',
