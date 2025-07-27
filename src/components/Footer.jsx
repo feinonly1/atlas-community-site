@@ -8,7 +8,7 @@ function Footer() {
           © {new Date().getFullYear()} Atlas Community | MTA & Garry's Mod Sunucuları
         </div>
         <div className="footer-powered">
-          Powered by Leva Yazılım
+          Powered by Leva Bilişim
         </div>
       </div>
     </footer>

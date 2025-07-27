@@ -6,7 +6,7 @@ const team = [
 		role: "Kurucu",
 		desc: "Topluluğun vizyonunu belirler, yenilikçi projeleri yönetir.",
 		avatar:
-			"https://cdn.discordapp.com/avatars/676793498640580608/479c48abe7347248b2d4dbe775b48005?size=1024",
+			"https://cdn.discordapp.com/avatars/676793498640580608/e942a1beadb39c9921074f519224f57a?size=1024",
 	},
   {
 		name: "Yamaç (asuwup)",
@@ -20,7 +20,7 @@ const team = [
 		role: "Ceo & Proje Yöneticisi",
 		desc: "Topluluğun vizyonunu belirler, yenilikçi projeleri yönetir.",
 		avatar:
-			"https://cdn.discordapp.com/avatars/770260411990671386/8d14821b35f357ac9b79f673a6d8eab2?size=1024",
+			"https://cdn.discordapp.com/avatars/770260411990671386/2f753e49b1e26571ea29aee70f355035?size=1024",
 	},
   	{
 		name: "Halil (halilfirarda)",
